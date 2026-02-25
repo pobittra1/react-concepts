@@ -15,7 +15,8 @@ const Country = ({ country, handleaVisitedCountries }) => {
         //using more shortcut
         //if visited true so !Visited mean set opposite of true. if false so !Visited mean set opposite of false is true.
         setVisited(!visited);
-        handleaVisitedCountries(country);
+        // if not visited country so do the next line
+        !visited && handleaVisitedCountries(country);
     }
 
     return (
