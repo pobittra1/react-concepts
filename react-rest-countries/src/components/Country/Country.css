@@ -1,0 +1,11 @@
+.country {
+    border: 2px solid green;
+    padding: 2rem;
+}
+
+.highlightCount {
+    padding: 4px;
+    background-color: yellow;
+    border-radius: 2px;
+    color: black;
+}
