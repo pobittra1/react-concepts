@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Country.css"
 
-const Country = ({ country, handleaVisitedCountries }) => {
+const Country = ({ country, handleaVisitedCountries, handleVisitedFlags }) => {
     const [visited, setVisited] = useState(false);
     const handleVisit = () => {
         // normal method to toggle state
@@ -27,6 +27,7 @@ const Country = ({ country, handleaVisitedCountries }) => {
             {/* conditional rendering here */}
             <p>population is: {country.population.population}. {country.population.population > 3000000 ? "Over populated country" : "best Country"}</p>
             <button onClick={handleVisit}>{visited ? "Visited" : "Not Visited"}</button>
+            <button onClick={() => handleVisitedFlags(country.flags.flags.png)}>Visited Flag</button>
         </div>
     );
 };
